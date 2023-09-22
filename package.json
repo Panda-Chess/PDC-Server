@@ -1,0 +1,14 @@
+{
+  "name": "@panda-chess/pdc-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@panda-chess/pdc-core": "^1.0.0"
+  }
+}
