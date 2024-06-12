@@ -6,6 +6,8 @@ import { User } from "@panda-chess/pdc-core";
 const router = Router();
 
 router.post("/login", async (req, res) => {
+    console.log("Login: ", req.body);
+
     const { email, password } = req.body;
     const user = await databaseService.tryLogin(email, password);
 
@@ -20,6 +22,8 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
+    console.log("Register: ", req.body);
+
     const newUser: User = req.body;
 
     const existingUser = await databaseService.getUserByEmail(newUser.email);
