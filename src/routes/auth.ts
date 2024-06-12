@@ -37,7 +37,8 @@ router.post("/register", async (req, res) => {
 
     if (user) {
         const token = sign({ ID: user._id }, "secret");
-        res.status(201).send({ token });
+        res.status(201).json({ token });
+        return;
     }
 });
 
